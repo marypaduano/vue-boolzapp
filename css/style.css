@@ -142,5 +142,13 @@ img{
     margin-bottom: 12px;
     display: flex;
   }
+
+  .fa-bell-slash{
+    color: rgb(142, 218, 252);
+    font-size: 18px;
+    background-color: white;
+    border-radius: 999px;
+    padding: 10px;
+  }
  
   
