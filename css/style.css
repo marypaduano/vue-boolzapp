@@ -35,6 +35,18 @@ img{
     padding: 20px;
   }
 
+  .row-input_message{
+    background-color: rgb(241, 241, 241);
+    padding: 20px;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .input-text{
+    flex-grow: 1;
+    padding: 10px;
+  }
+
   .anchor{
     color: rgba(84, 84, 84, 0.715);
   }
@@ -66,6 +78,7 @@ img{
   .sidebar {
     width: 30%;
     background-color: #f2f2f2;
+    border-right: 2px solid #a6a6a6 ;
   }
   
   .main-content {
