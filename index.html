@@ -8,6 +8,7 @@
     <title>BOOLZAPP</title>
     <script src="https://kit.fontawesome.com/c5d4023dee.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
@@ -16,47 +17,65 @@
             <div class="sidebar">
                 <div class="row row-sidebar">
                     <div class="col">
-                        avatar
-                        <span>nome</span>
+                        <img class="avatar" src="" alt="img">
+                        <span class="bold-text">Mary</span>
                     </div>
                     <div class="col">
                         <ul class="icon-list">
-                            <li>icona</li>
-                            <li>icona</li>
-                            <li>icona</li>
+                            <li><i class="fa-solid fa-circle-notch"></i></li>
+                            <li><i class="fa-regular fa-message"></i></li>
+                            <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
                         </ul>
                     </div>
                 </div>
-                <ul>
-                    <li>Contatto 1</li>
-                    <li>Contatto 2</li>
-                    <li>Contatto 3</li>
-                    <li>Contatto 4</li>
-                    <li>Contatto 5</li>
-                    <li>Contatto 6</li>
-                </ul>
+                <div class="row-alarm">
+                    <i class="fa-solid fa-bell-slash"></i>
+                    <div class="column">
+                        <span class="bold-text">Ricevi notifiche di nuovi messaggi</span>
+                        <a href="#" class="anchor">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <div class="row-search">
+                    <input type="text" placeholder="&cirmid; Cerca o inizia una nuova chat" class="search">
+                </div>
+                <div class="contact-list">
+                    <ul>
+                        <li v-for="contact in contacts" class="contact_item">
+                            <div class="col">
+                                <img :src="contact.avatar" alt="" />
+                                <span class="bold-text">{{contact.name}}</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="main-content">
                 <div class="row row-sidebar">
                     <div class="col">
-                        avatar
+                        <img class="avatar" src="" alt="img">
                         <div class="column">
-                            <span>nome</span>
-                            <span>ultimo accesso</span>
+                            <span class="bold-text">Luca</span>
+                            <span class="access">Ultimo accesso oggi alle 12:20</span>
                         </div>
                     </div>
                     <div class="col">
                         <ul class="icon-list">
-                            <li>icona</li>
-                            <li>icona</li>
-                            <li>icona</li>
+                            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                            <li><i class="fa-solid fa-paperclip"></i></li>
+                            <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
                         </ul>
                     </div>
                 </div>
-                <div class="chat-panel">                    
-                    <span class="chat_item item_receve">Ciao, come stai ?</span>
-                    <span class="chat_item item_send">Esaurita, grazie e tu?</span>
-                    
+                <div class="chat-panel">
+                    <div class="chat_item item_receve">
+                        <span class="message">Ciao, come stai ?</span>
+                        <span class="hours">15:30</span>
+                    </div>
+                    <div class="chat_item item_send">
+                        <span class="message">Esaurita, grazie e tu?</span>
+                        <span class="access hours">16:00</span>
+                    </div>
+
                 </div>
             </div>
         </div>
