@@ -49,7 +49,7 @@
                                 <img :src="contact.avatar" alt="" class="avatar"/>                                
                                 <div class="column">
                                     <span class="bold-text">{{contact.name}}</span>
-                                    <span class="access">ultimo messaggio</span>
+                                    <span class="access">{{contact.messages[0].message}}</span>
                                 </div>
                             </div>
                             <div class="col">
@@ -66,7 +66,7 @@
                         <img class="avatar" src="./img/Harry.jpg" alt="img">
                         <div class="column">
                             <span class="bold-text">Harry</span>
-                            <span class="access">{{Ultimo accesso oggi alle 12:20}}</span>
+                            <span class="access">Ultimo accesso oggi alle 12:20</span>
                         </div>
                     </div>
                     <div class="col">
@@ -80,8 +80,8 @@
                 <!-- chat panel -->
                 <div class="chat-panel">
                     <div class="chat_item item_send">
-                        <span class="message">{{contacts[currentIndex].messages[i].message}}</span>
-                        <span class="hours">{{contacts[currentIndex].messages[i].date}}</span>
+                        <span class="message">messaggio</span>
+                        <span class="hours">ora</span>
                     </div>
                     <div class="chat_item item_receve">
                         <span class="message">Esaurito, grazie e tu?</span>

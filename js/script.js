@@ -12,17 +12,17 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'Hai portato a spasso il cane?',
+                            message: 'Hai studiato per la lezione?',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'Ricordati di stendere i panni',
+                            message: 'Ci vorrebbe una magia',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 16:15:22',
-                            message: 'Tutto fatto!',
+                            message: 'Se vuoi ti presto un libro!',
                             status: 'received'
                         }
                     ],
