@@ -17,7 +17,7 @@
             <div class="sidebar">
                 <div class="row row-sidebar">
                     <div class="col">
-                        <img class="avatar" src="" alt="img">
+                        <img class="avatar" src="./img/useravatar.jpg" alt="img">
                         <span class="bold-text">Mary</span>
                     </div>
                     <div class="col">
@@ -29,21 +29,30 @@
                     </div>
                 </div>
                 <div class="row-alarm">
-                    <i class="fa-solid fa-bell-slash"></i>
+                    <span class="icon-alert">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </span>
                     <div class="column">
                         <span class="bold-text">Ricevi notifiche di nuovi messaggi</span>
                         <a href="#" class="anchor">Attiva notifiche desktop</a>
                     </div>
                 </div>
                 <div class="row-search">
-                    <input type="text" placeholder="&cirmid; Cerca o inizia una nuova chat" class="search">
+                    <input type="search" placeholder="&#128269; Cerca o inizia una nuova chat" class="search">
                 </div>
                 <div class="contact-list">
-                    <ul>
+                    <ul class="chat">
                         <li v-for="contact in contacts" class="contact_item">
                             <div class="col">
-                                <img :src="contact.avatar" alt="" />
-                                <span class="bold-text">{{contact.name}}</span>
+                                <img :src="contact.avatar" alt="" class="avatar"/>
+                                
+                                <div class="column">
+                                    <span class="bold-text">{{contact.name}}</span>
+                                    <span class="access">Ultimo messaggio</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="hours">16:30</span>
                             </div>
                         </li>
                     </ul>
@@ -52,9 +61,9 @@
             <div class="main-content">
                 <div class="row row-sidebar">
                     <div class="col">
-                        <img class="avatar" src="" alt="img">
+                        <img class="avatar" src="./img/Harry.jpg" alt="img">
                         <div class="column">
-                            <span class="bold-text">Luca</span>
+                            <span class="bold-text">Harry</span>
                             <span class="access">Ultimo accesso oggi alle 12:20</span>
                         </div>
                     </div>
@@ -79,9 +88,9 @@
 
                 </div>
                 <div class="row row-input_message">
-                    <i class="fa-regular fa-face-smile"></i>
+                    <span class="icon-list"><i class="fa-regular fa-face-smile"></i></span>
                     <input class="input-text" type="text" placeholder="Scrivi un messaggio">
-                    <i class="fa-solid fa-microphone"></i>
+                    <span class="icon-list"><i class="fa-solid fa-microphone"></i></span>
                 </div>
             </div>
         </div>

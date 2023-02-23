@@ -7,8 +7,8 @@ createApp({
         return {
             contacts: [
                 {
-                    name: 'Luca',
-                    avatar: '',
+                    name: 'Harry',
+                    avatar: './img/Harry.jpg',
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -28,8 +28,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Michele',
-                    avatar: '',
+                    name: 'Hermione',
+                    avatar: './img/Hermione.jpg',
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -49,8 +49,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Samuele',
-                    avatar: '',
+                    name: 'Hagrid',
+                    avatar: './img/Hagrid.jpg',
                     messages: [
                         {
                             date: '28/03/2020 10:10:40',
@@ -70,8 +70,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Alessandro',
-                    avatar: '',
+                    name: 'Ron',
+                    avatar: './img/Ron.jpg',
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -86,8 +86,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Claudia',
-                    avatar: '',
+                    name: 'Silente',
+                    avatar: './img/Silente.jpg',
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -107,8 +107,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Federico',
-                    avatar: '',
+                    name: 'Tom',
+                    avatar: './img/Tom.jpg',
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -123,8 +123,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Davide',
-                    avatar: '',
+                    name: 'Dolores',
+                    avatar: './img/Dolores.jpg',
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
