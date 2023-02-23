@@ -23,6 +23,11 @@ img{
        
   }
 
+  .space-between{
+    display: flex;
+    justify-content: space-between;
+  }
+
   .row{
     display: flex;
     justify-content: space-between;
@@ -54,9 +59,13 @@ img{
     color: rgba(84, 84, 84, 0.715);
   }
 
+  .row-search{
+    display: flex;
+    align-items: center;
+  }
   .search{
     border: none;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
   }
 
@@ -83,7 +92,7 @@ img{
   }
   
   .sidebar {
-    width: 30%;
+    width: 35%;
     background-color: #f2f2f2;
     border-right: 1px solid #7376758e;
     display: flex;
@@ -161,11 +170,16 @@ img{
   }
 
   .contact_item{
-    margin-bottom: 12px;
+    border-top: 1px solid lightgray;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
+
+  .contact_item:hover,
+  .contact_item.active {
+	background-color: #b8b8b8;
+}
 
   .fa-bell-slash{
     border-radius: 999px;

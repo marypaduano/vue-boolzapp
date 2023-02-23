@@ -13,6 +13,7 @@
 
 <body>
     <main>
+        <!-- sidebar -->
         <div class="container" id="app">
             <div class="sidebar">
                 <div class="row row-sidebar">
@@ -40,15 +41,15 @@
                 <div class="row-search">
                     <input type="search" placeholder="&#128269; Cerca o inizia una nuova chat" class="search">
                 </div>
+                <!-- Chat contact list -->
                 <div class="contact-list">
                     <ul class="chat">
-                        <li v-for="contact in contacts" class="contact_item">
+                        <li v-for="(contact,i) in contacts" class="contact_item" @click="setCurrentChat(i)">
                             <div class="col">
-                                <img :src="contact.avatar" alt="" class="avatar"/>
-                                
+                                <img :src="contact.avatar" alt="" class="avatar"/>                                
                                 <div class="column">
                                     <span class="bold-text">{{contact.name}}</span>
-                                    <span class="access">Ultimo messaggio</span>
+                                    <span class="access">ultimo messaggio</span>
                                 </div>
                             </div>
                             <div class="col">
@@ -58,13 +59,14 @@
                     </ul>
                 </div>
             </div>
+            <!-- header chat active -->
             <div class="main-content">
                 <div class="row row-sidebar">
                     <div class="col">
                         <img class="avatar" src="./img/Harry.jpg" alt="img">
                         <div class="column">
                             <span class="bold-text">Harry</span>
-                            <span class="access">Ultimo accesso oggi alle 12:20</span>
+                            <span class="access">{{Ultimo accesso oggi alle 12:20}}</span>
                         </div>
                     </div>
                     <div class="col">
@@ -75,18 +77,19 @@
                         </ul>
                     </div>
                 </div>
+                <!-- chat panel -->
                 <div class="chat-panel">
                     <div class="chat_item item_send">
-                        <span class="message">Ciao, come stai ?</span>
-                        <span class="hours">15:30</span>
+                        <span class="message">{{contacts[currentIndex].messages[i].message}}</span>
+                        <span class="hours">{{contacts[currentIndex].messages[i].date}}</span>
                     </div>
                     <div class="chat_item item_receve">
                         <span class="message">Esaurito, grazie e tu?</span>
                         <span class="access hours">16:00</span>
-                    </div>
-                    
+                    </div>                   
 
                 </div>
+                <!-- input toolbar -->
                 <div class="row row-input_message">
                     <span class="icon-list"><i class="fa-regular fa-face-smile"></i></span>
                     <input class="input-text" type="text" placeholder="Scrivi un messaggio">

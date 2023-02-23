@@ -149,6 +149,13 @@ createApp({
         }
     },
     methods: {
+        setCurrentChat(currentMessage){
+            this.currentIndex = currentMessage
+        },
+    }
+}).mount('#app')
+
+
 
         // nextSlide() {
         //     const lastIndex = this.slides.length - 1
@@ -170,6 +177,5 @@ createApp({
         //     }
 
         // }
-    }
-}).mount('#app')
+
 
