@@ -91,7 +91,7 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'Ciao Claudia, hai novità?',
+                            message: 'Ciao Albus, hai novità?',
                             status: 'sent'
                         },
                         {

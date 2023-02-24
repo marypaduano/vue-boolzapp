@@ -13,8 +13,9 @@
 
 <body>
     <main>
-        <!-- sidebar -->
+
         <div class="container" id="app">
+            <!-- sidebar -->
             <div class="sidebar">
                 <div class="row row-sidebar">
                     <div class="col">
@@ -44,9 +45,10 @@
                 <!-- Chat contact list -->
                 <div class="contact-list">
                     <ul class="chat">
-                        <li v-for="(contact,i) in contacts" class="contact_item" @click="setCurrentChat(i)">
+                        <li v-for="(contact,i) in contacts" :class="i === currentIndex ? 'active' : ''"
+                            class="contact_item" @click="setCurrentChat(i)">
                             <div class="col">
-                                <img :src="contact.avatar" alt="" class="avatar"/>                                
+                                <img :src="contact.avatar" alt="" class="avatar" />
                                 <div class="column">
                                     <span class="bold-text">{{contact.name}}</span>
                                     <span class="access">{{contact.messages[0].message}}</span>
@@ -59,13 +61,13 @@
                     </ul>
                 </div>
             </div>
-            <!-- header chat active -->
             <div class="main-content">
+                <!-- header chat active -->
                 <div class="row row-sidebar">
                     <div class="col">
-                        <img class="avatar" src="./img/Harry.jpg" alt="img">
+                        <img class="avatar" :src="contacts[currentIndex].avatar" alt="img">
                         <div class="column">
-                            <span class="bold-text">Harry</span>
+                            <span class="bold-text">{{contacts[currentIndex].name}}</span>
                             <span class="access">Ultimo accesso oggi alle 12:20</span>
                         </div>
                     </div>
@@ -79,15 +81,11 @@
                 </div>
                 <!-- chat panel -->
                 <div class="chat-panel">
-                    <div class="chat_item item_send">
-                        <span class="message">messaggio</span>
+                    <div v-for="chat in contacts[currentIndex].messages"
+                        :class="chat.status === 'sent' ? 'item_send' : 'item_receve'" class="chat_item">
+                        <span>{{chat.message}}</span>
                         <span class="hours">ora</span>
                     </div>
-                    <div class="chat_item item_receve">
-                        <span class="message">Esaurito, grazie e tu?</span>
-                        <span class="access hours">16:00</span>
-                    </div>                   
-
                 </div>
                 <!-- input toolbar -->
                 <div class="row row-input_message">
