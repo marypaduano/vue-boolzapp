@@ -51,7 +51,7 @@
                                 <img :src="contact.avatar" alt="" class="avatar" />
                                 <div class="column">
                                     <span class="bold-text">{{contact.name}}</span>
-                                    <span class="access">{{contact.messages[0].message}}</span>
+                                    <span class="access">ultimo messaggio</span>
                                 </div>
                             </div>
                             <div class="col">
@@ -90,7 +90,9 @@
                 <!-- input toolbar -->
                 <div class="row row-input_message">
                     <span class="icon-list"><i class="fa-regular fa-face-smile"></i></span>
-                    <input class="input-text" type="text" placeholder="Scrivi un messaggio">
+                    <input class="input-text" type="text" placeholder="Scrivi un messaggio"
+                    v-model="newMessage[currentIndex]" @keydown.enter="sendMessage(currentIndex)">
+                   
                     <span class="icon-list"><i class="fa-solid fa-microphone"></i></span>
                 </div>
             </div>

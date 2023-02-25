@@ -2,6 +2,7 @@
 
 const { createApp } = Vue
 
+
 createApp({
     data() {
         return {
@@ -145,37 +146,37 @@ createApp({
                 }
 
             ],
-            currentIndex: 0
+            currentIndex: 0,
+            newMessage: [''],
         }
     },
     methods: {
-        setCurrentChat(currentMessage){
+        setCurrentChat(currentMessage) {
             this.currentIndex = currentMessage
         },
-    }
+        sendMessage(currentIndex) {
+            const message = this.newMessage[currentIndex]
+            if (message.trim() === '') {
+                return
+            }
+            this.contacts[currentIndex].messages.push(message),
+                this.newMessage[currentIndex].value = '',
+
+                setTimeout(() => {
+                this.contacts[currentIndex].messages.push('Ok')
+                }, 1000);
+        },
+    },
+
+    // computed:{
+    //     lastMessage(){
+
+    //     }
+    //     lastAccess(){
+
+    //     }
+    // }
+
 }).mount('#app')
-
-
-
-        // nextSlide() {
-        //     const lastIndex = this.slides.length - 1
-        //     if (this.currentIndex < lastIndex) {
-        //         this.currentIndex++
-        //     }
-        //     else {
-        //         this.currentIndex = 0
-        //     }
-        // },
-
-        // prevSlide() {
-        //     const lastIndex = this.slides.length - 1
-        //     if (this.currentIndex > 0) {
-        //         this.currentIndex--
-        //     }
-        //     else {
-        //         this.currentIndex = lastIndex
-        //     }
-
-        // }
 
 
