@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="row-search">
-                    <input type="search" placeholder="&#128269; Cerca o inizia una nuova chat" class="search">
+                    <input type="search" v-model="search" placeholder="&#128269; Cerca o inizia una nuova chat" class="search">
                 </div>
                 <!-- Chat contact list -->
                 <div class="contact-list">
@@ -84,14 +84,14 @@
                     <div v-for="chat in contacts[currentIndex].messages"
                         :class="chat.status === 'sent' ? 'item_send' : 'item_receve'" class="chat_item">
                         <span>{{chat.message}}</span>
-                        <span class="hours">ora</span>
+                        <span class="hours">{{chat.date}}</span>
                     </div>
                 </div>
                 <!-- input toolbar -->
                 <div class="row row-input_message">
                     <span class="icon-list"><i class="fa-regular fa-face-smile"></i></span>
                     <input class="input-text" type="text" placeholder="Scrivi un messaggio"
-                    v-model="newMessage[currentIndex]" @keydown.enter="sendMessage(currentIndex)">
+                    v-model="newMessage" @keyup.enter="sendMessage">
                    
                     <span class="icon-list"><i class="fa-solid fa-microphone"></i></span>
                 </div>

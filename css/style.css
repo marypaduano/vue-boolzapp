@@ -194,5 +194,9 @@ img{
     background-color: white;
     color: rgb(142, 218, 252);
   }
+
+  .hidden{
+    display: none;
+  }
  
   

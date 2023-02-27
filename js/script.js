@@ -147,24 +147,35 @@ createApp({
 
             ],
             currentIndex: 0,
-            newMessage: [''],
+            newMessage: '',
+            search: '',
         }
     },
     methods: {
         setCurrentChat(currentMessage) {
             this.currentIndex = currentMessage
         },
-        sendMessage(currentIndex) {
-            const message = this.newMessage[currentIndex]
-            if (message.trim() === '') {
+        sendMessage() {
+            const msg = this.newMessage.trim()
+            if (msg === '') {
                 return
             }
-            this.contacts[currentIndex].messages.push(message),
-                this.newMessage[currentIndex].value = '',
+            const newEnterMessage = {
+                date: '',
+                message: msg,
+                status: 'sent'
+            }
+            this.contacts[this.currentIndex].messages.push(newEnterMessage)
 
-                setTimeout(() => {
-                this.contacts[currentIndex].messages.push('Ok')
-                }, 1000);
+            const activeContact = this.contacts[this.currentIndex]
+            setTimeout(() => {
+                const msgReceived = {
+                    date: '',
+                    message: 'ok',
+                    status: 'received',
+                }
+                activeContact.messages.push(msgReceived)
+            }, 1000);
         },
     },
 
